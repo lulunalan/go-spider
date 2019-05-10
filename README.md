@@ -21,13 +21,13 @@ systemctl start mariadb
 - 登陆创建存储数据的库
 
 ```sql
-create database dht charset utf8mb4;
+CREATE DATABASE dht CHARSET utf8mb4;
 ```
 
 - 授权给`spider`程序连接数据库的用户
 
 ```sql
-grant all privileges on dht.* to 'btlet'@'127.0.0.1' identified by 'PASSWORD';
+GRANT ALL PRIVILEGES ON dht.* TO 'btlet'@'127.0.0.1' IDENTIFIED BY 'PASSWORD';
 ```
 
 - 创建存储数据的表
@@ -53,6 +53,12 @@ CREATE TABLE `dht_infohash` (
 ```shell
 git clone git@github.com:lulunalan/go-spider.git
 cd go-spider
+```
+
+- 查看帮助
+
+```shell
+./spider --help
 ```
 
 - 前台运行
