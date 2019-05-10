@@ -22,13 +22,13 @@ grant all privileges on dht.* to 'btlet'@'127.0.0.1' identified by 'PASSWORD';
 ```sql
 CREATE TABLE `dht_infohash` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `infohash` vchar(255),
+  `infohash` varchar(255),
   `name` text,
   `files` text,
   `hits` int(12) DEFAULT NULL,
   `update_time` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 ```
 
 > 如果爬取到的数据中某一字段超过数据库表中所定义字段长度，则程序会异常退出，可适当调整字段长度
