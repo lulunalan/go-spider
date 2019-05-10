@@ -5,7 +5,20 @@
 
 ### 使用方法
 
-- 创建存储数据的数据库
+- 安装数据库
+
+```shell
+yum makecache fast
+yum install mariadb-server mariadb
+```
+
+- 启动数据库
+
+```shell
+systemctl start mariadb
+```
+
+- 登陆创建存储数据的库
 
 ```sql
 create database dht charset utf8mb4;
